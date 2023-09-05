@@ -1,0 +1,37 @@
+.burger {
+	border: none;
+	display: block;
+	background-color: transparent;
+	width: 30px;
+	height: 30px;
+	// flex: 0 0 35px;
+	> * {
+		height: 2px;
+		width: 30px;
+		background-color: var(--accent-color-dark);
+		transition: all 0.3s;
+		&:not(:last-child) {
+			margin-bottom: 35%;
+		}
+	}
+	// &__one {
+	// }
+	// &__two {
+	// }
+	// &__three {
+	// }
+}
+
+.active {
+	.burger {
+		&__one {
+			transform: rotate(45deg) translate(10%, 20px);
+		}
+		&__two {
+			transform: rotate(-45deg) translate(20%, 10px);
+		}
+		&__three {
+			transform: translateY(5px);
+		}
+	}
+}
