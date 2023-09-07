@@ -1,22 +1,35 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, useParams } from 'react-router-dom';
 
 import SvgIcon from '../../../assets/SvgIcon';
 
 import styles from './footer.module.scss';
 
 function Footer() {
+	const currentPage = useParams();
+	console.log(currentPage);
+
 	return (
 		<footer className={styles.footer}>
 			<nav>
 				<ul>
 					<li>
-						<NavLink to={'/'}>
+						<NavLink
+							to={'/'}
+							className={({ isActive, isPending }) =>
+								isPending ? 'pending' : isActive ? `${styles.active}` : ''
+							}
+						>
 							<SvgIcon name="home" />
 							<div>Home</div>
 						</NavLink>
 					</li>
 					<li>
-						<NavLink to={'/walks'}>
+						<NavLink
+							to={'/walks'}
+							className={({ isActive, isPending }) =>
+								isPending ? 'pending' : isActive ? `${styles.active}` : ''
+							}
+						>
 							<SvgIcon name="key" />
 							<div>Walks</div>
 						</NavLink>
@@ -28,7 +41,12 @@ function Footer() {
 						</a>
 					</li>
 					<li>
-						<NavLink to={'/tickets'}>
+						<NavLink
+							to={'/tickets'}
+							className={({ isActive, isPending }) =>
+								isPending ? 'pending' : isActive ? `${styles.active}` : ''
+							}
+						>
 							<SvgIcon name="ticket" />
 							<div>Tickets</div>
 						</NavLink>

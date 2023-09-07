@@ -1,8 +1,29 @@
 @use "./modules/helpers/variables/colors";
 
+@font-face {
+	font-family: "Helvetica";
+	src: url("./fonts/helvetica_bold.otf");
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Helvetica";
+	src: url("./fonts/helvetica_light.otf");
+	font-weight: light;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Helvetica";
+	src: url("./fonts/helvetica_regular.otf");
+	font-weight: regular;
+	font-style: normal;
+}
+
 body {
 	margin: 0;
 	background-color: var(--primary);
+	font-family: "Helvetica";
+	color: var(--secondary);
 }
 a {
 	text-decoration: none;
@@ -12,4 +33,10 @@ ul {
 	list-style: none;
 	padding: 0;
 	margin: 0;
+}
+
+.fz {
+	&-m {
+		font-size: 15px;
+	}
 }

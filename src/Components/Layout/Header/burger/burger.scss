@@ -1,17 +1,23 @@
 .burger {
 	border: none;
-	display: block;
+	display: inline-block;
+	position: absolute;
+	padding: 0;
+	right: 1rem;
+	bottom: 15px;
 	background-color: transparent;
+	// background-color: red;
 	width: 30px;
 	height: 30px;
+	// margin-left: auto;
 	// flex: 0 0 35px;
 	> * {
 		height: 2px;
 		width: 30px;
-		background-color: var(--accent-color-dark);
+		background-color: var(--primary);
 		transition: all 0.3s;
 		&:not(:last-child) {
-			margin-bottom: 35%;
+			margin-bottom: 20%;
 		}
 	}
 	// &__one {
@@ -25,13 +31,16 @@
 .active {
 	.burger {
 		&__one {
-			transform: rotate(45deg) translate(10%, 20px);
+			transform: rotate(45deg) translate(5px, 6px);
 		}
 		&__two {
-			transform: rotate(-45deg) translate(20%, 10px);
+			background-color: transparent;
 		}
 		&__three {
-			transform: translateY(5px);
+			transform: rotate(-45deg) translate(5px, -6px);
 		}
+	}
+	#menu {
+		transform: translateY(0);
 	}
 }
