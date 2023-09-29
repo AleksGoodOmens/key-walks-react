@@ -5,14 +5,18 @@ import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
 function Home({ setColor }) {
+	const [content, setContent] = useState({
+		title: 'title',
+		paragraph: 'paragraph',
+	});
+
 	useEffect(() => {
 		setColor('');
-	}, []);
-
-	const [content, setContent] = useState({
-		title: "Discover the Enchanting Past of King's Cross.",
-		paragraph: "Unveiling the Hidden Gems of London's Thriving Hub",
-	});
+		setContent({
+			title: "Discover the Enchanting Past of King's Cross.",
+			paragraph: "Unveiling the Hidden Gems of London's Thriving Hub",
+		});
+	}, [setColor]);
 
 	return (
 		<section className={styles.home}>

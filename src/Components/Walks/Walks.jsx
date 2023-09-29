@@ -7,24 +7,25 @@ import pic2 from './imgs/2.jpg';
 import pic3 from './imgs/3.jpg';
 
 function Walks({ setColor }) {
+	const [cards, setCards] = useState([{ title: 'title', pic: 'not found' }]);
+
 	useEffect(() => {
 		setColor('dark');
-	}, []);
-
-	const [cards, setCards] = useState([
-		{
-			title: 'islington',
-			pic: pic1,
-		},
-		{
-			title: "king's Cross",
-			pic: pic2,
-		},
-		{
-			title: 'Through the ages',
-			pic: pic3,
-		},
-	]);
+		setCards([
+			{
+				title: 'islington',
+				pic: pic1,
+			},
+			{
+				title: "king's Cross",
+				pic: pic2,
+			},
+			{
+				title: 'Through the ages',
+				pic: pic3,
+			},
+		]);
+	}, [setColor]);
 
 	return (
 		<section className={styles.walks}>

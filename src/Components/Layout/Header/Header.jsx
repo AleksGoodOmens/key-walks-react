@@ -3,23 +3,29 @@ import SvgIcon from '../../../assets/SvgIcon';
 import Burger from './burger/Burger';
 
 import styles from './header.module.scss';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function Header({ color }) {
 	const [walks, setWalks] = useState([
-		{
-			name: 'King Cross',
-			subtitle: 'From Gasholders to Google',
-		},
-		{
-			name: 'Islington',
-			subtitle: 'Islington Through the ages',
-		},
-		{
-			name: '',
-			subtitle: 'Up coming',
-		},
+		{ name: 'new walk', subtitle: 'subtitle' },
 	]);
+
+	useEffect(() => {
+		setWalks([
+			{
+				name: 'King Cross',
+				subtitle: 'From Gasholders to Google',
+			},
+			{
+				name: 'Islington',
+				subtitle: 'Islington Through the ages',
+			},
+			{
+				name: '',
+				subtitle: 'Up coming',
+			},
+		]);
+	}, []);
 
 	return (
 		<header className={styles.header}>
