@@ -1,7 +1,10 @@
 .header {
-	background-color: var(--primary-dark);
+	// background-color: var(--primary-dark);
 	padding: 44px 1rem 0 1rem;
 	position: relative;
+	&__logo {
+		display: block;
+	}
 	a {
 		line-height: 350%;
 	}

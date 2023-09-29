@@ -3,30 +3,37 @@ import SvgIcon from '../../../assets/SvgIcon';
 import Burger from './burger/Burger';
 
 import styles from './header.module.scss';
+import { useState } from 'react';
 
-const walks = [
-	{
-		name: 'King Cross',
-		subtitle: 'From Gasholders to Google',
-	},
-	{
-		name: 'Islington',
-		subtitle: 'Islington Through the ages',
-	},
-	{
-		name: '',
-		subtitle: 'Up coming',
-	},
-];
+function Header({ color }) {
+	const [walks, setWalks] = useState([
+		{
+			name: 'King Cross',
+			subtitle: 'From Gasholders to Google',
+		},
+		{
+			name: 'Islington',
+			subtitle: 'Islington Through the ages',
+		},
+		{
+			name: '',
+			subtitle: 'Up coming',
+		},
+	]);
 
-function Header() {
 	return (
 		<header className={styles.header}>
 			<nav>
-				<NavLink to="/">
-					<SvgIcon name="logo" />
+				<NavLink
+					className={styles.header__logo}
+					to="/"
+				>
+					<SvgIcon
+						color={color}
+						name="logo"
+					/>
 				</NavLink>
-				<Burger />
+				<Burger color={color} />
 
 				<section
 					className={styles.menu}
@@ -40,7 +47,7 @@ function Header() {
 								{walks.map((item) => (
 									<li
 										key={item.name}
-										className={!item.name && styles.menu__disabled}
+										className={!item.name ? styles.menu__disabled : ''}
 									>
 										<Link className={styles.menu__item}>
 											<SvgIcon name="key" />

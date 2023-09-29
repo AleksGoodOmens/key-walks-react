@@ -40,3 +40,25 @@ ul {
 		font-size: 15px;
 	}
 }
+
+.button {
+	color: var(--primary);
+	text-align: center;
+	font-size: 10px;
+	letter-spacing: 1.75px;
+	text-transform: uppercase;
+	border-radius: 12px;
+	background: var(--accent-dark);
+	transition: 0.5s;
+	padding: 0.7rem 2rem;
+	border: none;
+	&:hover {
+		background: var(--accent-light);
+	}
+}
+
+.dark {
+	path {
+		fill: var(--secondary);
+	}
+}

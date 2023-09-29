@@ -1,22 +1,22 @@
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useParams } from 'react-router-dom';
 import Home from '../Components/Home/Home';
 import Walks from '../Components/Walks/Walks';
 import Tickets from '../Components/Tickets/Tickets';
 
-function AppRoutes() {
+function AppRoutes({ setColor }) {
 	return (
 		<Routes>
 			<Route
 				path="/"
-				element={<Home />}
+				element={<Home setColor={setColor} />}
 			/>
 			<Route
 				path="/walks"
-				element={<Walks />}
+				element={<Walks setColor={setColor} />}
 			/>
 			<Route
 				path="/tickets"
-				element={<Tickets />}
+				element={<Tickets setColor={setColor} />}
 			/>
 			<Route
 				path="*"

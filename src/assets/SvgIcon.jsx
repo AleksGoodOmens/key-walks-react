@@ -1,5 +1,5 @@
-function SvgIcon(name) {
-	switch (name.name) {
+function SvgIcon({ name, color }) {
+	switch (name) {
 		case 'home':
 			return (
 				<svg
@@ -179,8 +179,9 @@ function SvgIcon(name) {
 		case 'logo':
 			return (
 				<svg
-					width="167"
-					height="12"
+					className={color ? color : ''}
+					width="237"
+					height="52"
 					viewBox="0 0 167 12"
 					fill="none"
 					xmlns="http://www.w3.org/2000/svg"

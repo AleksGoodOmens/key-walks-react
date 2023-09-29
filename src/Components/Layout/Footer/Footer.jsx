@@ -1,13 +1,10 @@
-import { NavLink, useParams } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import SvgIcon from '../../../assets/SvgIcon';
 
 import styles from './footer.module.scss';
 
 function Footer() {
-	const currentPage = useParams();
-	console.log(currentPage);
-
 	return (
 		<footer className={styles.footer}>
 			<nav>

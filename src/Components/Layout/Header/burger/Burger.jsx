@@ -1,6 +1,6 @@
 import './burger.scss';
 
-function Burger() {
+function Burger({ color }) {
 	const addActiveClass = (e) => {
 		e.target.closest('nav').classList.toggle('active');
 		document.body.classList.toggle('overflow');
@@ -8,7 +8,7 @@ function Burger() {
 	return (
 		<button
 			onClick={(e) => addActiveClass(e)}
-			className="burger"
+			className={`burger ${color ? color : ''}`}
 		>
 			<div className="burger__one"></div>
 			<div className="burger__two"></div>
