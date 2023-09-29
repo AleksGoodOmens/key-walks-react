@@ -23,6 +23,7 @@
 	transition: transform 0.5s;
 	height: calc(100vh - 182px);
 	overflow-y: scroll;
+	z-index: 5;
 	a {
 		line-height: inherit;
 		color: var(--secondary);
