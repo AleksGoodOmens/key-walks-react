@@ -1,5 +1,5 @@
-@import "../../modules/helpers/mixins/mixins";
-@import "../../modules/helpers/variables/variables";
+@use "../../modules/helpers/mixins/mixins" as *;
+@use "../../modules/helpers/variables/variables" as *;
 
 .home {
 	display: flex;

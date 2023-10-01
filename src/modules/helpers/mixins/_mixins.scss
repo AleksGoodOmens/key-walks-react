@@ -1,3 +1,4 @@
+@use "../variables/variables" as *;
 // Small devices
 @mixin xsm {
 	@media (min-width: #{$screen-xsm-min}) {
