@@ -35,7 +35,7 @@ function Walks({ setColor }) {
 				pic: `https://img5.arrivo.ru/1679/52/63959/0/ragpickinghistory.co.uk.jpg`,
 			},
 			{
-				title: 'Jack the Ripper',
+				title: 'jack the ripper',
 				pic: `https://media.tacdn.com/media/attractions-splice-spp-674x446/08/4b/12/e1.jpg`,
 			},
 			{

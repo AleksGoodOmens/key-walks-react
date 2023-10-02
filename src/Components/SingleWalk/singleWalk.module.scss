@@ -1,3 +1,60 @@
 .container {
 	margin-top: -118px;
+	display: flex;
+	flex-direction: column;
+	height: calc(100dvh - 78px);
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	padding: 100px 1rem 32px 1rem;
+	// .{.header__title}
+
+	&__title {
+		margin: 0;
+		text-transform: uppercase;
+		color: var(--primary);
+		font-weight: 700;
+		font-size: 32px;
+	}
+
+	// .{.header__button}
+
+	&__button {
+		color: var(--primary);
+		font-size: 36px;
+	}
+}
+
+.content {
+	// .{.content__title}
+	padding: 1rem;
+	font-size: 0.8rem;
+	overflow-y: scroll;
+
+	&__title {
+		font-size: 1.2rem;
+	}
+
+	// .{.content__author}
+
+	&__author {
+	}
+
+	// .{.content__texts}
+
+	&__texts {
+	}
+
+	// .{.content__text}
+
+	&__text {
+	}
+
+	// .{`${.content__button}
+}
+
+.button {
+	align-self: center;
 }
