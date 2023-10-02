@@ -4,6 +4,7 @@
 	position: relative;
 	&__logo {
 		display: block;
+		margin-right: 40px;
 	}
 	a {
 		line-height: 350%;
@@ -64,6 +65,9 @@
 		gap: 1rem;
 		line-height: 100%;
 		margin-bottom: 1rem;
+		svg {
+			flex: 0 0 auto;
+		}
 		path {
 			fill: var(--secondary);
 		}
@@ -71,6 +75,7 @@
 		h3 {
 			font-size: 20px;
 			margin: 0 0 0.5rem 0;
+			text-transform: capitalize;
 		}
 		span {
 			font-size: 15px;

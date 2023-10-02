@@ -3,6 +3,7 @@ import Home from '../Components/Home/Home';
 import Walks from '../Components/Walks/Walks';
 import Tickets from '../Components/Tickets/Tickets';
 import SingleWalk from '../Components/SingleWalk/SingleWalk';
+import SingleTicket from '../Components/SingleTicket/SingleTicket';
 
 function AppRoutes({ setColor }) {
 	return (
@@ -23,6 +24,10 @@ function AppRoutes({ setColor }) {
 			<Route
 				path="/tickets"
 				element={<Tickets setColor={setColor} />}
+			/>
+			<Route
+				path="/tickets/:name"
+				element={<SingleTicket setColor={setColor} />}
 			/>
 			<Route
 				path="*"

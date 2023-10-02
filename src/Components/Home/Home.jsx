@@ -19,7 +19,7 @@ function Home({ setColor }) {
 	}, [setColor]);
 
 	return (
-		<section className={styles.home}>
+		<section className={`${styles.home} fadeIn`}>
 			<section
 				className={styles.promo}
 				style={{

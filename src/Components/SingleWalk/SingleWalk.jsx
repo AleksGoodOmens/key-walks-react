@@ -33,7 +33,7 @@ const data = {
 		pic: pic2,
 	},
 	'through the ages': {
-		title: `Through the Ages" Walking Tour: A Timeless Journey through London's History`,
+		title: `"Through the Ages" Walking Tour: A Timeless Journey through London's History`,
 		author: 'Aleks Goodomens',
 		text: [
 			`Step back in time and traverse the centuries with the "Through the Ages" Walking Tour in London. This enchanting tour offers a unique opportunity to explore the city's rich and diverse history, from its ancient origins to its vibrant modern-day culture.`,
@@ -83,7 +83,6 @@ function SingleWalk({ setColor }) {
 		if (singleWalk === 'coming soon') {
 			navigate('/walks');
 		}
-		console.log(singleWalk);
 		setTour(data[singleWalk]);
 	}, [singleWalk, navigate]);
 
@@ -99,7 +98,7 @@ function SingleWalk({ setColor }) {
 			});
 
 		return (
-			<section className={styles.container}>
+			<section className={`${styles.container} fadeIn`}>
 				<header
 					className={styles.header}
 					style={{ background: `no-repeat center /cover url(${pic})` }}
@@ -130,7 +129,7 @@ function SingleWalk({ setColor }) {
 				</section>
 				<Link
 					className={`${styles.button} button`}
-					to={`/tickets:${singleWalk}`}
+					to={`/tickets/${singleWalk}`}
 				>
 					Book Your Historic <br /> Walk Now
 				</Link>

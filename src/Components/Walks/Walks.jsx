@@ -70,7 +70,7 @@ function Walks({ setColor }) {
 				}}
 				id="walks"
 				modules={[Autoplay, EffectCoverflow]}
-				className={styles.walks}
+				className={`${styles.walks} fadeIn`}
 			>
 				{cards.map((card, id) => (
 					<SwiperSlide key={id}>

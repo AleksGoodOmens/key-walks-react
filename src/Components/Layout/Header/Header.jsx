@@ -13,12 +13,25 @@ function Header({ color }) {
 	useEffect(() => {
 		setWalks([
 			{
-				name: 'King Cross',
+				name: `king's cross`,
 				subtitle: 'From Gasholders to Google',
 			},
 			{
-				name: 'Islington',
+				name: 'islington',
 				subtitle: 'Islington Through the ages',
+			},
+
+			{
+				name: 'through the ages',
+				subtitle: `"Through the Ages" Walking Tour: A Timeless Journey through London's History`,
+			},
+			{
+				name: 'london dungeon',
+				subtitle: `London Dungeon Walking Tour: A Hauntingly Thrilling Adventure`,
+			},
+			{
+				name: 'jack the ripper',
+				subtitle: `Jack the Ripper Walking Tour: Uncover the Mystery of London's Most Notorious Killer`,
 			},
 			{
 				name: '',
@@ -55,7 +68,10 @@ function Header({ color }) {
 										key={item.name}
 										className={!item.name ? styles.menu__disabled : ''}
 									>
-										<Link className={styles.menu__item}>
+										<Link
+											to={`/walks/${item.name}`}
+											className={styles.menu__item}
+										>
 											<SvgIcon name="key" />
 											<div>
 												{item.name ? <h3>{item.name}</h3> : ''}
